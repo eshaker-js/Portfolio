@@ -8,4 +8,3 @@ Dockerfile
 .github
 *.md
 *.pem
-.env

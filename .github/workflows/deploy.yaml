@@ -45,9 +45,9 @@ jobs:
             --region ${{ secrets.AWS_REGION }} \
             --comment "Deploy application" \
             --parameters 'commands=[
-              "docker pull ${{ secrets.DOCKER_USERNAME }}/portfolio:latest",
+              "docker pull ${{ secrets.DOCKER_USERNAME }}/portfolio:latest",  
               "docker stop portfolio || true",
               "docker rm portfolio || true",
-              "docker run -d --name portfolio -p 3000:3000 ${{ secrets.DOCKER_USERNAME }}/portfolio:latest"
+              "docker run -d --name portfolio -p 80:3000 ${{ secrets.DOCKER_USERNAME }}/portfolio:latest"
             ]' \
             --output text
