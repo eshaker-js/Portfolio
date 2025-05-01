@@ -5,6 +5,7 @@ dist
 Dockerfile
 .git
 .gitignore
+.github
 *.md
 *.pem
-.next
+.env

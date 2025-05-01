@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 
-interface Project {
+interface Project {   // This is the interface for the project data which will be POSTed to the API as a json object
   name: string
   description: string
   address: string

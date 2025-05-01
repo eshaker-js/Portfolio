@@ -12,6 +12,8 @@ interface Project {
   difficulty: number
 }
 
+const secret = process.env.PORTFOLIO_POST_REQUEST_KEY
+
 const filePath = path.join(process.cwd(), "data", "projects.json")
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -26,6 +28,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   } else if (req.method === "POST") {
     try {
+      const authHeader = req.headers.authorization;
+      if (!authHeader || authHeader !== `Bearer ${secret}`) {
+        return res.status(401).json({ message: "Unauthorized" })
+      }
       const newProject: Project = req.body
 
       const fileData = fs.readFileSync(filePath, "utf-8")
