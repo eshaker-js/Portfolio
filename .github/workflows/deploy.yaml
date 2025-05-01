@@ -38,15 +38,16 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
           role-session-name: github-actions
       - name: Run Commands on EC2 Instance
-        uses: aws-actions/amazon-ec2-run-command@v1
-        with:
-          instance-id: ${{ secrets.AWS_EC2_INSTANCE_ID }}
-          commands: |
-            docker pull ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
-            docker stop portfolio || true
-            docker rm portfolio || true
-            docker run -d --name portfolio \
-            -p 3000:3000 \
-            -v /home/ubuntu/portfolio-data:/app/data \
-            -e PORTFOLIO_SECRET_KEY=${{ secrets.PORTFOLIO_SECRET_KEY }} \
-            ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
+        run: |
+            aws ssm send-command \
+            --document-name "AWS-RunShellScript" \
+            --instance-ids ${{ secrets.EC2_INSTANCE_ID }} \
+            --region ${{ secrets.AWS_REGION }} \
+            --comment "Deploy application" \
+            --parameters 'commands=[
+              "docker pull ${{ secrets.DOCKER_USERNAME }}/portfolio:latest",
+              "docker stop portfolio || true",
+              "docker rm portfolio || true",
+              "docker run -d --name portfolio -p 3000:3000 ${{ secrets.DOCKER_USERNAME }}/portfolio:latest"
+            ]' \
+            --output text
