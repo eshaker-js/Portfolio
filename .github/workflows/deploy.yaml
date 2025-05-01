@@ -10,13 +10,6 @@ jobs:
   build-and-push-to-docker:
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
-    paths:
-      - Dockerfile
-      - 'src/**'
-      - 'data/**'
-      - 'package.json'
-      - 'package-lock.json'
-      
     steps:
       - name: Checkout # Checkout the code from the repository
         uses: actions/checkout@v4
@@ -33,6 +26,12 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
+        paths:
+          - Dockerfile
+          - 'src/**'
+          - 'data/**'
+          - 'package.json'
+          - 'package-lock.json'
   deploy-on-ec2:
     name: Deploy on EC2
     runs-on: ubuntu-latest
