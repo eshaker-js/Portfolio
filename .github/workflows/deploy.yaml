@@ -26,12 +26,6 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
-        paths:
-          - Dockerfile
-          - 'src/**'
-          - 'data/**'
-          - 'package.json'
-          - 'package-lock.json'
   deploy-on-ec2:
     name: Deploy on EC2
     runs-on: ubuntu-latest
