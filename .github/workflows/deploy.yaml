@@ -46,7 +46,7 @@ jobs:
         run: |
             aws ssm send-command \
             --document-name "AWS-RunShellScript" \
-            --instance-ids ${{ secrets.EC2_INSTANCE_ID }} \
+            --instance-ids ${{ secrets.AWS_EC2_INSTANCE_ID }} \
             --region ${{ secrets.AWS_REGION }} \
             --comment "Deploy application" \
             --parameters 'commands=[
