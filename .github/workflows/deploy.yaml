@@ -28,8 +28,8 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
-          cache-from: type=registry,scope=registry.hub.docker.com/${{ secrets.DOCKER_USERNAME }}
-          cache-to: type=registry,scope=registry.hub.docker.com/${{ secrets.DOCKER_USERNAME }}
+          cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/portfolio:latest
+          cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/portfolio:latest
         if: github.event_name == 'push'
   deploy-on-ec2:
     name: Deploy on EC2
