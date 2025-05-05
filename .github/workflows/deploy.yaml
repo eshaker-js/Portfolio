@@ -58,6 +58,7 @@ jobs:
               "sudo docker run -d \
               --name portfolio \
               --restart unless-stopped \
+              -e PORTFOLIO_POST_REQUEST_KEY = '${{ secrets.PORTFOLIO_POST_REQUEST_KEY }}' \
               -p 3000:3000 \
               ${{ secrets.DOCKER_USERNAME }}/portfolio:latest"
             ]' \
