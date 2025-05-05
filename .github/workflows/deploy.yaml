@@ -60,6 +60,7 @@ jobs:
               --restart unless-stopped \
               -e PORTFOLIO_POST_REQUEST_KEY='${{ secrets.PORTFOLIO_POST_REQUEST_KEY }}' \
               -p 3000:3000 \
+              -v /home/ubuntu/portfolio-data:/app/data \
               ${{ secrets.DOCKER_USERNAME }}/portfolio:latest"
             ]' \
             --output text
