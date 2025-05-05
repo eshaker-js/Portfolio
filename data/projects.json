@@ -1,10 +1,2 @@
 [
-  {
-    "name": "CookingChords",
-    "description": "A VR rhythm game that features slicing, shooting, whacking and mixing mechanics in addition to a functional level editor with runtime .wav audio import. Built with Unreal Engine 5 and C++.",
-    "address": "",
-    "githubURL": "https://github.com/eshaker-js/CookingChords",
-    "tags": ["Unreal Engine 5", "C++", "OOP", "VR"],
-    "difficulty": 4
-  }
 ]
