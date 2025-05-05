@@ -74,7 +74,7 @@ export default function ProjectsPage() {
                   href={project.address}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-medium text-blue-600 hover:underline"
+                  className="text-sm font-medium text-gray-600 hover:underline bg-green-100 px-2 py-1 rounded"
                 >
                   Live Demo
                 </a>
@@ -85,7 +85,7 @@ export default function ProjectsPage() {
                 href={project.githubURL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-medium text-gray-600 hover:underline bg-gray-100 px-2 py-1 rounded"
+                className="text-sm font-medium text-gray-600 hover:underline bg-blue-100 px-2 py-1 rounded"
               >
                 GitHub Repository
               </a>
