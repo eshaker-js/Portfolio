@@ -1,0 +1,8 @@
+{
+    "name": "Luna-Aura",
+    "description": "A Cinema system client-server project built with Java, developed as part of a Software Engineering course alongside 5 other team members",
+    "address": "",
+    "githubURL": "https://github.com/eshaker-js/Luna-Aura",
+    "tags": ["Java", "Agile Methodologies", "Client-Server Architecture", "OOP"],
+    "difficulty": 4
+  }

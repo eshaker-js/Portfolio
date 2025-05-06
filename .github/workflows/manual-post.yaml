@@ -1,0 +1,19 @@
+name: Post Project Manually #for projects without a live version
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Post-Project:
+    name: Post Project to API
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Post request
+        run: |
+          curl -X POST "https://www.jansalama.com/api/projects" \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer ${{secrets.PORTFOLIO_POST_REQUEST_KEY}}" \
+            --data @manual-data.json \
+            --fail 
