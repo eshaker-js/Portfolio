@@ -27,9 +27,10 @@ jobs:
         with:
           context: .
           push: true
+          platforms: linux/amd64
           tags: ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
-          cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/portfolio:latest #Caching
-          cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/portfolio:latest
+          #cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/portfolio:latest #Caching
+          #cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/portfolio:latest
         if: github.event_name == 'push'
   deploy-on-ec2:
     name: Deploy on EC2
