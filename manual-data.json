@@ -1,8 +1,8 @@
 {
-    "name": "Luna-Aura",
-    "description": "A Cinema system client-server project built with Java, developed as part of a Software Engineering course alongside 5 other team members",
+    "name": "Portfolio",
+    "description": "This page is a project in and of itself, essentially a Next.js app, and a functional CI/CD pipeline that deploys the website, and all projects with live demos (individually)",
     "address": "",
-    "githubURL": "https://github.com/eshaker-js/Luna-Aura",
-    "tags": ["Java", "Agile Methodologies", "Client-Server Architecture", "OOP"],
-    "difficulty": 4
-  }
+    "githubURL": "https://github.com/eshaker-js/Portfolio",
+    "tags": ["Next.js", "CI/CD", "Docker", "GitHub Actions", "AWS"],
+    "difficulty": 5
+}
