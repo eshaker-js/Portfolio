@@ -13,8 +13,6 @@ jobs:
       - name: Checkout # Checkout the code from the repository
         uses: actions/checkout@v4
         if: github.event_name == 'push'
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v2
       - name: Setup Docker # Setup Docker
         uses: docker/setup-buildx-action@v2
         if: github.event_name == 'push'
@@ -27,7 +25,7 @@ jobs:
       - name: Build and push Docker image # Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
@@ -55,7 +53,7 @@ jobs:
             --region ${{ secrets.AWS_REGION }} \
             --comment "Deploy application" \
             --parameters 'commands=[
-              "sudo docker pull ${{ secrets.DOCKER_USERNAME }}/portfolio:latest",  
+              "sudo docker pull --platform linux/amd64 ${{ secrets.DOCKER_USERNAME }}/portfolio:latest",  
               "sudo docker stop portfolio || true",
               "sudo docker rm portfolio || true",
               "sudo docker run -d \
