@@ -25,12 +25,8 @@ jobs:
       - name: Build and push Docker image # Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          platforms: linux/amd64
           context: .
           push: true
-          output: |
-            type=registry
-            oci-mediatypes=false   # ← force a Docker v2 manifest
           tags: ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
           cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/portfolio:latest #Caching
           cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/portfolio:latest
