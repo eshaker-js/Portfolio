@@ -16,7 +16,7 @@ const secret = process.env.PORTFOLIO_POST_REQUEST_KEY
 
 const filePath = path.join(process.cwd(), 'data', 'projects.json')
 
-function deepEqual(a: any, b: any): boolean {
+function deepEqual(a: Project, b: Project): boolean {
   return JSON.stringify(a) === JSON.stringify(b)
 }
 

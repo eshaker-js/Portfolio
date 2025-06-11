@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import Link from 'next/link'
 import About from '@/components/About'
 import Contact from '@/components/Contact'
 import CertificationsSection from '@/components/Certifications'

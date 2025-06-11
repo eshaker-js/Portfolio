@@ -4,7 +4,7 @@ export default function About() {
       <h1 className='text-3xl font-bold mb-4'>About Me</h1>
 
       <p className='mb-4 text-lg leading-relaxed'>
-        Hey — I'm Jan Salama. I’m a Computer Science grad, DevOps engineer in
+        Hey — I&apos;m Jan Salama. I&apos;m a Computer Science grad, DevOps engineer in
         the making, and the founder of{' '}
         <span className='font-semibold'>EchoShock</span>, an indie game curation
         platform.
