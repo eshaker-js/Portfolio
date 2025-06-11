@@ -43,13 +43,11 @@ export default function CertificationsSection() {
             rel='noopener noreferrer'
             className='block bg-white text-black rounded-lg shadow-md overflow-hidden hover:scale-[1.02] transition-transform'
           >
-            <Image
-              src={cert.imageUrl}
-              alt={cert.title}
-              width={500} // adjust width as needed
-              height={300} // adjust height as needed
-              unoptimized
-              className='w-full h-auto object-contain'
+            <img
+              src='https://udemy-certificate.s3.amazonaws.com/image/UC-2097a817-f888-434e-bf32-3f39bb7dc923.jpg'
+              alt='raw image'
+              width={500}
+              height={300}
             />
             <div className='p-3'>
               <p className='font-semibold text-sm mb-1'>{cert.title}</p>
