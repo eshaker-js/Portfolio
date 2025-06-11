@@ -1,4 +1,4 @@
-//import Image from 'next/image'
+import Image from 'next/image'
 
 interface Certification {
   title: string
@@ -31,7 +31,6 @@ const certifications: Certification[] = [
 ]
 
 export default function CertificationsSection() {
-  console.log('here')
   return (
     <section className='max-w-5xl mx-auto py-12 px-4'>
       <h2 className='text-2xl font-bold mb-6'>My Badges of Honor</h2>
@@ -44,11 +43,12 @@ export default function CertificationsSection() {
             rel='noopener noreferrer'
             className='block bg-white text-black rounded-lg shadow-md overflow-hidden hover:scale-[1.02] transition-transform'
           >
-            <img
-              src='https://udemy-certificate.s3.amazonaws.com/image/UC-2097a817-f888-434e-bf32-3f39bb7dc923.jpg'
-              alt='raw image'
-              width={500}
-              height={300}
+            <Image
+              src={cert.imageUrl}
+              alt={cert.title}
+              width={500} // adjust width as needed
+              height={300} // adjust height as needed
+              className='w-full h-auto object-contain'
             />
             <div className='p-3'>
               <p className='font-semibold text-sm mb-1'>{cert.title}</p>

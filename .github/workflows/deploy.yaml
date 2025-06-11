@@ -29,8 +29,6 @@ jobs:
           push: true
           platforms: linux/amd64
           tags: ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
-          cache-from: type=registry,ref=yourusername/portfolio:latest
-          cache-to: type=inline
         if: github.event_name == 'push'
   deploy-on-ec2:
     name: Deploy on EC2
