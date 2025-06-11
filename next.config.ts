@@ -1,15 +1,14 @@
-import type { NextConfig } from 'next'
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'udemy-certificate.s3.amazonaws.com',
-        pathname: '/image/**',
+        pathname: '/image/**', 
       },
     ],
   },
 }
 
-export default nextConfig
+module.exports = nextConfig
