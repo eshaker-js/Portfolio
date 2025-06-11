@@ -31,6 +31,7 @@ const certifications: Certification[] = [
 ]
 
 export default function CertificationsSection() {
+  console.log('here')
   return (
     <section className='max-w-5xl mx-auto py-12 px-4'>
       <h2 className='text-2xl font-bold mb-6'>My Badges of Honor</h2>
