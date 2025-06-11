@@ -1,9 +1,16 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-    images: {
-    domains: ['udemy-certificate.s3.amazonaws.com'],
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'udemy-certificate.s3.amazonaws.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
-};
+}
 
-export default nextConfig;
+export default nextConfig

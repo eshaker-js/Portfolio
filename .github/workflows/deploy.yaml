@@ -29,8 +29,8 @@ jobs:
           push: true
           platforms: linux/amd64
           tags: ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
-          cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/portfolio:latest #Caching
-          cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/portfolio:latest
+          cache-from: type=registry,ref=yourusername/portfolio:latest
+          cache-to: type=inline
         if: github.event_name == 'push'
   deploy-on-ec2:
     name: Deploy on EC2
@@ -47,21 +47,21 @@ jobs:
           role-session-name: github-actions
       - name: Run Commands on EC2 Instance
         run: |
-            aws ssm send-command \
-            --document-name "AWS-RunShellScript" \
-            --instance-ids ${{ secrets.AWS_EC2_INSTANCE_ID }} \
-            --region ${{ secrets.AWS_REGION }} \
-            --comment "Deploy application" \
-            --parameters 'commands=[
-              "sudo docker pull --platform linux/amd64 ${{ secrets.DOCKER_USERNAME }}/portfolio:latest",  
-              "sudo docker stop portfolio || true",
-              "sudo docker rm portfolio || true",
-              "sudo docker run -d \
-              --name portfolio \
-              --restart unless-stopped \
-              -e PORTFOLIO_POST_REQUEST_KEY='${{ secrets.PORTFOLIO_POST_REQUEST_KEY }}' \
-              -p 3000:3000 \
-              -v /home/ubuntu/portfolio-data:/app/data \
-              ${{ secrets.DOCKER_USERNAME }}/portfolio:latest"
-            ]' \
-            --output text
+          aws ssm send-command \
+          --document-name "AWS-RunShellScript" \
+          --instance-ids ${{ secrets.AWS_EC2_INSTANCE_ID }} \
+          --region ${{ secrets.AWS_REGION }} \
+          --comment "Deploy application" \
+          --parameters 'commands=[
+            "sudo docker pull --platform linux/amd64 ${{ secrets.DOCKER_USERNAME }}/portfolio:latest",  
+            "sudo docker stop portfolio || true",
+            "sudo docker rm portfolio || true",
+            "sudo docker run -d \
+            --name portfolio \
+            --restart unless-stopped \
+            -e PORTFOLIO_POST_REQUEST_KEY='${{ secrets.PORTFOLIO_POST_REQUEST_KEY }}' \
+            -p 3000:3000 \
+            -v /home/ubuntu/portfolio-data:/app/data \
+            ${{ secrets.DOCKER_USERNAME }}/portfolio:latest"
+          ]' \
+          --output text
