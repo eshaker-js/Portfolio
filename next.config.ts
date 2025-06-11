@@ -6,8 +6,7 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'udemy-certificate.s3.amazonaws.com',
-        port: '',
-        pathname: '/**',
+        pathname: '/image/**',
       },
     ],
   },

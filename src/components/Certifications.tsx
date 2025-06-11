@@ -12,7 +12,7 @@ const certifications: Certification[] = [
   {
     title: 'JavaScript - The Complete Guide 2025 (Beginner + Advanced)',
     imageUrl:
-      'https://udemy-certificate.s3.amazonaws.com/image/UC-2097a817-f888-434e-bf32-3f39bb7dc923.jpg?v=1744047817000',
+      'https://udemy-certificate.s3.amazonaws.com/image/UC-2097a817-f888-434e-bf32-3f39bb7dc923.jpg',
     certUrl:
       'https://www.udemy.com/certificate/UC-2097a817-f888-434e-bf32-3f39bb7dc923/',
     platform: 'Udemy',
@@ -21,7 +21,7 @@ const certifications: Certification[] = [
   {
     title: ' GitHub Actions - The Complete Guide',
     imageUrl:
-      'https://udemy-certificate.s3.amazonaws.com/image/UC-065edb17-f90f-44c4-bfc3-7ad8c90326ac.jpg?v=1745596401000',
+      'https://udemy-certificate.s3.amazonaws.com/image/UC-065edb17-f90f-44c4-bfc3-7ad8c90326ac.jpg',
     certUrl:
       'https://www.udemy.com/certificate/UC-065edb17-f90f-44c4-bfc3-7ad8c90326ac/',
     platform: 'Udemy',
