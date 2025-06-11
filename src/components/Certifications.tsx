@@ -48,6 +48,7 @@ export default function CertificationsSection() {
               alt={cert.title}
               width={500} // adjust width as needed
               height={300} // adjust height as needed
+              unoptimized
               className='w-full h-auto object-contain'
             />
             <div className='p-3'>
