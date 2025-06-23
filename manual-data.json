@@ -1,8 +1,8 @@
 {
-    "name": "Portfolio",
-    "description": "This page is a project in and of itself, essentially a Next.js app, and a functional CI/CD pipeline that deploys the website, and all projects with live demos (individually)",
-    "address": "https://www.jansalama.com",
-    "githubURL": "https://github.com/eshaker-js/Portfolio",
-    "tags": ["Next.js", "CI/CD", "Docker", "GitHub Actions", "AWS"],
-    "difficulty": 5
+  "name": "EchoShock",
+  "description": "My current main project, an Indie Game curation platform that is in continued development",
+  "address": "https://www.EchoShock.net",
+  "githubURL": "",
+  "tags": ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS", "Node.js"],
+  "difficulty": 5
 }

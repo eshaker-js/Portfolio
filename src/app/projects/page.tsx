@@ -1,6 +1,6 @@
-'use client'
+"use client"
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react"
 
 interface Project {
   // This is the interface for the project data which will be POSTed to the API as a json object
@@ -16,7 +16,7 @@ export default function ProjectsPage() {
   const [projects, setProjects] = useState<Project[]>([])
 
   useEffect(() => {
-    fetch('/api/projects')
+    fetch("/api/projects")
       .then((res) => res.json())
       .then((data) => {
         const sorted = data.sort(
@@ -58,7 +58,7 @@ export default function ProjectsPage() {
                   <svg
                     key={i}
                     xmlns='http://www.w3.org/2000/svg'
-                    fill={i < project.difficulty ? 'currentColor' : 'none'}
+                    fill={i < project.difficulty ? "currentColor" : "none"}
                     viewBox='0 0 24 24'
                     stroke='currentColor'
                     className='w-5 h-5 text-yellow-500'
@@ -89,14 +89,20 @@ export default function ProjectsPage() {
                   No Live Demo
                 </span>
               )}
-              <a
-                href={project.githubURL}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='text-sm font-medium text-gray-600 hover:underline bg-blue-200 px-2 py-1 rounded'
-              >
-                GitHub Repository
-              </a>
+              {project.githubURL ? (
+                <a
+                  href={project.githubURL}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-sm font-medium text-gray-600 hover:underline bg-blue-200 px-2 py-1 rounded'
+                >
+                  GitHub Repository
+                </a>
+              ) : (
+                <span className='text-sm font-medium text-gray-600 bg-red-100 px-2 py-1 rounded'>
+                 Repo Unavailable
+                </span>
+              )}
             </div>
           </div>
         ))}

@@ -9,7 +9,7 @@ export default function Home() {
       <header className='w-full max-w-4xl text-center sm:text-left'>
         <h1 className='text-4xl sm:text-5xl font-bold mb-4'>Jan Salama</h1>
         <p className='text-lg sm:text-xl text-[var(--foreground)]/90'>
-          DevOps Engineer · Full Stack Developer · Indie Game Dreamer
+           Founder @ EchoShock · Aspiring DevOps Engineer
         </p>
       </header>
       <About />

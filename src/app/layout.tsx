@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Jan Salama – DevOps Engineer & Indie Builder',
-  description: 'Portfolio of Jan Salama – DevOps-focused software engineer and creator of EchoShock.',
+  title: 'Jan Salama - Founder @ EchoShock & DevOps Engineer',
+  description: 'Portfolio of Jan Salama - Creator of EchoShock and Aspiring DevOps Engineer',
 }
 
 

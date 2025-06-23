@@ -1,2 +1,55 @@
 [
+  {
+    "name": "CookingChords",
+    "description": "A VR rhythm game that features slicing, shooting, whacking and mixing mechanics in addition to a functional level editor with runtime .wav audio import. Built with Unreal Engine 5 and C++.",
+    "address": "",
+    "githubURL": "https://github.com/eshaker-js/CookingChords",
+    "tags": ["Unreal Engine 5", "C++", "OOP", "VR"],
+    "difficulty": 4
+  },
+  {
+    "name": "Luna-Aura",
+    "description": "A Cinema system client-server project built with Java, developed as part of a Software Engineering course alongside 5 other team members",
+    "address": "",
+    "githubURL": "https://github.com/eshaker-js/Luna-Aura",
+    "tags": [
+      "Java",
+      "Agile Methodologies",
+      "Client-Server Architecture",
+      "OOP"
+    ],
+    "difficulty": 4
+  },
+  {
+    "name": "Portfolio",
+    "description": "This page is a project in and of itself, essentially a Next.js app, and a functional CI/CD pipeline that deploys the website, and all projects with live demos (individually)",
+    "address": "https://www.jansalama.com",
+    "githubURL": "https://github.com/eshaker-js/Portfolio",
+    "tags": ["Next.js", "CI/CD", "Docker", "GitHub Actions", "AWS"],
+    "difficulty": 5
+  },
+  {
+    "name": "Investment Calculator",
+    "description": "An app that calculates compounding interest for investments, built to practice useState.",
+    "address": "/projects/investment-calculator",
+    "githubURL": "https://github.com/eshaker-js/Udemy-Projects/tree/main/tictactoe",
+    "tags": ["React", "Vite", "JavaScript", "HTML"],
+    "difficulty": 1
+  },
+  {
+    "name": "Tic-Tac-Toe",
+    "description": "A simple Tic-Tac-Toe game to practice useState. (This project is a Code-Along)",
+    "address": "/projects/tictactoe",
+    "githubURL": "https://github.com/eshaker-js/Udemy-Projects/tree/main/tictactoe",
+    "tags": ["React", "Vite", "JavaScript", "HTML"],
+    "difficulty": 1
+  },
+  {
+    "name": "EchoShock",
+    "description": "My current main project, an Indie Game curation platform that is in continued development",
+    "address": "https://www.EchoShock.net",
+    "githubURL": "",
+    "tags": ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS", "Node.js"],
+    "difficulty": 5
+  }
 ]
