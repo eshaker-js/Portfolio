@@ -34,8 +34,8 @@ export default function About() {
         {' '}
         I want to note that the current design is just a functional placeholder.
         Right now, my main focus is on building{' '}
-        <span className='font-semibold'>EchoShock</span>. Once that’s up and
-        running, I’ll return to craft a portfolio page that is more warm, welcoming and impressive!
+        <span className='font-semibold'>EchoShock</span>. Once that's up and
+        running, I'll return to craft a portfolio page that is more warm, welcoming and impressive!
       </p>
     </section>
   )

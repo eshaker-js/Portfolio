@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth`}
       >
         <Header />
-        <main className='pt-24'>
+        <main className='pt-2'>
           {children}
         </main>
       </body>
