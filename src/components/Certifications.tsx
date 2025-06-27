@@ -41,7 +41,7 @@ export default function CertificationsSection() {
             href={cert.certUrl}
             target='_blank'
             rel='noopener noreferrer'
-            className='block bg-white text-black rounded-lg shadow-md overflow-hidden hover:scale-[1.02] transition-transform'
+            className='block bg-white text-black rounded-lg shadow-md overflow-hidden hover:scale-[1.08] transition-transform'
           >
             <Image
               src={cert.imageUrl}

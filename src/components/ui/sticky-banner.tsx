@@ -45,7 +45,7 @@ export const StickyBanner = ({
     >
       {children}
 
-      <motion.button
+      {/* <motion.button
         initial={{
           scale: 0,
         }}
@@ -56,7 +56,7 @@ export const StickyBanner = ({
         onClick={() => setOpen(!open)}
       >
         <CloseIcon className="h-5 w-5 text-white" />
-      </motion.button>
+      </motion.button> */}
     </motion.div>
   );
 };
