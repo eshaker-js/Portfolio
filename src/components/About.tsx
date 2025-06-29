@@ -4,16 +4,20 @@ export default function About() {
       <h1 className='text-3xl font-bold mb-4'>About Me</h1>
 
       <p className='mb-4 text-lg leading-relaxed'>
-        Hi! I&apos;m Jan Salama. I&apos;m a Computer Science grad, DevOps engineer in
-        the making, and the founder of{' '}
+        Hi! I&apos;m Jan Salama. I&apos;m a Computer Science grad, full-stack
+        developer, and the founder of{' '}
         <span className='font-semibold'>EchoShock</span>, an indie game curation
         platform.
       </p>
 
       <p className='mb-4 text-lg leading-relaxed'>
-        I built my portfolio with a full CI/CD pipeline, Docker, GitHub Actions,
-        and live AWS deployments. I love solving problems, shipping fast, and
-        building tools that make creators shine.
+        While my primary focus is on full-stack development, I also care deeply
+        about how code ships. I built this portfolio with a complete{' '}
+        <span className='font-medium'>
+          CI/CD pipeline using Docker, GitHub Actions, and AWS.
+        </span>{' '}
+        Because automation, reliability, and fast iteration matter just as
+        much as clean code.
       </p>
 
       <p className='text-lg leading-relaxed'>
@@ -30,12 +34,10 @@ export default function About() {
         , and continued my university studies straight out of highschool.
       </p>
 
-      <p className='text-2xl leading-relaxed mt-10'>
-        {' '}
-        I want to note that the current design is just a functional placeholder.
-        Right now, my main focus is on building{' '}
-        <span className='font-semibold'>EchoShock</span>. Once that's up and
-        running, I'll return to craft a portfolio page that is more warm, welcoming and impressive!
+      <p className='mb-4 text-lg leading-relaxed'>
+          I just launched the first version of EchoShock and I now intend on polishing up this portfolio
+          as for now it's a simple static page. I plan to add more features and cool stuff soon
+          as well as more projects to showcase my work.
       </p>
     </section>
   )

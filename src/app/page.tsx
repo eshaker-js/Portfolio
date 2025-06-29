@@ -1,6 +1,9 @@
 import About from '@/components/About'
 import Contact from '@/components/Contact'
 import CertificationsSection from '@/components/Certifications'
+import { FlipWords } from '@/components/ui/flip-words'
+
+const words = ['Founder@EchoShock', 'Full-Stack Developer', 'DevOps Engineer']
 
 export default function Home() {
   return (
@@ -8,9 +11,9 @@ export default function Home() {
       {/* Header */}
       <header className='w-full max-w-4xl text-center sm:text-left'>
         <h1 className='text-4xl sm:text-5xl font-bold mb-4'>Jan Salama</h1>
-        <p className='text-lg sm:text-xl text-[var(--foreground)]/90'>
-           Founder @ EchoShock · Aspiring DevOps Engineer
-        </p>
+        <div className='text-4xl mx-auto font-normal text-neutral-400'>
+          <FlipWords words={words} /> <br />
+        </div>
       </header>
       <About />
       {/* CTA Buttons */}
@@ -38,13 +41,19 @@ export default function Home() {
         <h2 className='text-2xl font-semibold mb-4'>Featured Projects</h2>
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
           {/* Dummy project cards – replace with dynamic mapping later */}
-          <div className='bg-white text-black rounded-xl p-4 shadow-md'>
-            <h3 className='font-bold text-lg mb-1'>EchoShock</h3>
-            <p className='text-sm text-gray-700'>
-              A curated platform for indie games built with Next.js, Supabase,
-              and pure ambition.
-            </p>
-          </div>
+          <a
+            href='https://echoshock.net'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <div className='bg-white text-black rounded-xl p-4 shadow-md'>
+              <h3 className='font-bold text-lg mb-1'>EchoShock</h3>
+              <p className='text-sm text-gray-700'>
+                A curated platform for indie games built with Next.js, Supabase,
+                and pure ambition.
+              </p>
+            </div>
+          </a>
           <div className='bg-white text-black rounded-xl p-4 shadow-md'>
             <h3 className='font-bold text-lg mb-1'>DevOps Portfolio</h3>
             <p className='text-sm text-gray-700'>
@@ -54,7 +63,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Contact/>
+      <Contact />
     </div>
   )
 }
