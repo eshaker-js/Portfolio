@@ -1,6 +1,5 @@
 'use client'
 
-import Link from "next/link"
 import { StickyBanner } from "./ui/sticky-banner"
 import { HeaderButton } from "./ui/header-button"
 

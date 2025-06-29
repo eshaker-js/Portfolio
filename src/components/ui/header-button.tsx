@@ -1,16 +1,16 @@
 "use client"
 import React from "react"
 import {motion} from "motion/react"
-import { cn } from "@/lib/utils"
+// import { cn } from "@/lib/utils"
 
 export const HeaderButton = ({
-  className,
-  children,
+  // className,
+  // children,
   ref,
   label,
 }: {
-  className?: string
-  children?: React.ReactNode
+  // className?: string
+  // children?: React.ReactNode
   ref: string 
   label: string
 }) => {

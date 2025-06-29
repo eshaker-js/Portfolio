@@ -37,7 +37,7 @@
         <p className='mb-4 text-lg leading-relaxed'>
           {' '}
           I just launched the first version of EchoShock and I now intend on
-          polishing up this portfolio as for now it's a simple static page. I plan
+          polishing up this portfolio as for now it&apos;s a simple static page. I plan
           to add more features and cool stuff soon as well as more projects to
           showcase my work.
         </p>
